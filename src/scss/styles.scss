@@ -1,0 +1,181 @@
+@import "reset";
+@import "global";
+
+@font-face {
+  font-family: "TTLakes Regular";
+  src: url(../fonts/TTLakes-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TTLakes Medium";
+  src: url(../fonts/TTLakes-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TTLakes Bold";
+  src: url(../fonts/TTLakes-Bold.ttf);
+  font-weight: 700;
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  min-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__btn {
+    background-color: #FF3E79;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin: 16px 0;
+    cursor: pointer;
+  }
+
+  &__burger-btn {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__burger-btn span {
+    height: 2px;
+    background: #fff;
+    border-radius: 1px;
+    margin: 5px 11px 0 11px;
+    display: flex;
+  }
+
+  &__burger-btn span:first-child {
+    width: 18px;
+  }
+
+  &__burger-btn span:nth-child(2) {
+    width: 10px;
+  }
+
+  &__burger-btn span:nth-child(3) {
+    width: 14px;
+    margin-bottom: 5px;
+  }
+
+  &__logo {
+    margin: 18px 16px;
+  }
+
+  &__options {
+    margin-left: 18px;
+    position: relative;
+  }
+
+  &__options::before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    border-radius: 1px;
+  }
+
+  &__checkstatus-btn {
+    margin-right: 16px;
+    margin-left: 18px;
+  }
+
+  .contact-btns {
+    display: none;
+  }
+}
+
+.top-screen {
+  .title {
+    position: relative;
+    margin: 24px 0 24px 16px;
+    font-family: 'TTLakes Bold';
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 40px;
+      background-color: #41F6D7;
+      left: -20px;
+      border-radius: 4px;
+    }
+  }
+
+  &__scroll {
+    margin: 0 16px 24px 16px;
+    display: flex;
+    gap: 20px;
+    height: 40px;
+    overflow-x: auto;
+  }
+
+  &__scroll-item {
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'TTLakes Medium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+  }
+
+  &__text {
+    margin: 0 16px 16px 16px;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+.readmore {
+  font-family: 'TTLakes Medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+.arrows-down{
+  margin-right: 16px;
+}
