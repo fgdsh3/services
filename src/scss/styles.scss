@@ -30,6 +30,10 @@ body {
   box-sizing: inherit;
 }
 
+html {
+  background-color: #F8F8F8;
+}
+
 body {
   margin: 0;
 }
@@ -42,8 +46,15 @@ body {
 
 .menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  background-color: #fff;
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__btn {
     background-color: #FF3E79;
@@ -88,6 +99,11 @@ body {
   }
 
   &__options {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__repair {
     margin-left: 18px;
     position: relative;
   }
@@ -134,21 +150,30 @@ body {
   }
 
   &__scroll {
-    margin: 0 16px 24px 16px;
     display: flex;
     gap: 20px;
-    height: 40px;
+    margin: 0 16px 10px;
     overflow-x: auto;
+    padding-bottom: 20px;
   }
 
   &__scroll-item {
-    white-space: nowrap;
-    cursor: pointer;
     font-family: 'TTLakes Medium';
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7E7E82;
+    padding: 8px 16px;
+    text-align: center;
+    align-self: center;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  &__scroll-item--active {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    background-color: #fff;
   }
 
   &__text {
@@ -176,6 +201,7 @@ body {
   margin-left: 16px;
   margin-bottom: 16px;
 }
-.arrows-down{
+
+.arrows-down {
   margin-right: 16px;
 }

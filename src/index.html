@@ -12,12 +12,14 @@
   <div class="wrapper">
     <header class="header">
       <nav class="menu">
-        <button class="menu__burger-btn menu__btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <img class="menu__logo" src="/images/logo.svg" alt="">
+        <div class="menu__left">
+          <button class="menu__burger-btn menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <img class="menu__logo" src="/images/logo.svg" alt="">
+        </div>
         <div class="contact-btns">
           <button class="contacts-btns__item menu__btn">
             <img class="contacts-btns__img" src="images/phone.svg" alt="">
@@ -29,12 +31,14 @@
             <img class="contacts-btns__img" src="images/person.svg" alt="">
           </button>
         </div>
-        <button class="menu__options menu__btn">
-          <img src="images/repair.svg" alt="">
-        </button>
-        <button class="menu__checkstatus-btn menu__btn">
-          <img src="images/check.svg" alt="">
-        </button>
+        <div class="menu__options">
+          <button class="menu__repair menu__btn">
+            <img src="images/repair.svg" alt="">
+          </button>
+          <button class="menu__checkstatus-btn menu__btn">
+            <img src="images/check.svg" alt="">
+          </button>
+        </div>
       </nav>
     </header>
     <main class="main">
@@ -43,7 +47,7 @@
           Услуги и сервисы
         </h1>
         <div class="top-screen__scroll">
-          <a class="top-screen__scroll-item">Ремонтируемые устройства</a>
+          <a class="top-screen__scroll-item top-screen__scroll-item--active">Ремонтируемые устройства</a>
           <a class="top-screen__scroll-item">Дополнительные услуги</a>
           <a class="top-screen__scroll-item">Цены на услуги</a>
           <a class="top-screen__scroll-item">Адреса сервисных центров</a>
