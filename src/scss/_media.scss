@@ -1,0 +1,117 @@
+@media(min-width: 768px) {
+  .menu {
+    justify-content: end;
+
+    &__left {
+      margin-right: auto;
+    }
+
+    &__burger-btn {
+      margin-left: 24px;
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &__logo {
+      margin-left: 42px;
+    }
+
+    .contact-btns {
+      display: flex;
+    }
+
+    &__checkstatus-btn {
+      margin-right: 24px;
+    }
+  }
+
+  .top-screen {
+    padding-bottom: 45px;
+
+    &__scroll-box {
+      margin-bottom: 18px;
+    }
+
+    &__content-box {
+      flex-direction: row;
+      gap: 50px;
+      margin: 0 24px;
+    }
+
+
+    &__text {
+      line-height: 20px;
+      margin: 0 0 10px 0;
+
+      .unactive:first-of-type {
+        display: inline;
+      }
+    }
+
+    &__img {
+      width: 50%;
+    }
+  }
+}
+
+@media(min-width: 1120px) {
+  .menu {
+    display: none;
+  }
+
+  .top-screen {
+    padding-bottom: 50px;
+
+    &__head {
+      justify-content: space-between;
+    }
+
+    .title {
+      margin: 42px 0 24px 16px;
+    }
+
+    &__options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__options-item {
+      font-family: 'TTLakes Medium';
+      font-size: 16px;
+      line-height: 24px;
+      text-align: right;
+      letter-spacing: -0.2px;
+      color: #1B1C21;
+      cursor: pointer;
+    }
+
+    &__options .menu__checkstatus-btn,
+    &__options .menu__repair {
+      margin-left: 8px;
+    }
+
+    &__content-box {
+      flex-direction: row;
+      gap: 35px;
+      margin: 0 34px;
+
+    }
+
+    &__text {
+      margin-bottom: 14px;
+
+      .unactive {
+        display: inline;
+      }
+    }
+  }
+}
