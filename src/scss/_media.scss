@@ -30,8 +30,12 @@
   .top-screen {
     padding-bottom: 45px;
 
+    .title {
+      margin-left: 24px;
+    }
+
     &__scroll-box {
-      margin-bottom: 18px;
+      margin: 0 24px 18px;
     }
 
     &__content-box {
@@ -52,6 +56,207 @@
 
     &__img {
       width: 50%;
+      max-width: 532px;
+    }
+  }
+
+  .block-title {
+    margin-left: 24px;
+  }
+
+  .showmore {
+    display: flex;
+    margin-left: 24px;
+  }
+
+  .brands {
+
+    &__slider {
+      padding-bottom: 0;
+    }
+
+    &__slider-wrapper {
+      flex-wrap: wrap;
+      margin: 0 24px 34px;
+    }
+
+    &__item {
+      width: 224px;
+      margin: 0 24px 16px 0;
+    }
+
+    &__item {
+      display: none;
+    }
+
+    &__item:nth-child(1),
+    &__item:nth-child(2),
+    &__item:nth-child(3),
+    &__item:nth-child(4),
+    &__item:nth-child(5),
+    &__item:nth-child(6) {
+      display: flex;
+    }
+  }
+
+  .tech {
+    &__slider-wrapper {
+      flex-wrap: wrap;
+      margin: 0 24px;
+    }
+
+    &__item {
+      width: 224px;
+      margin: 0 24px 16px 0;
+      display: none;
+    }
+
+    &__item:nth-child(1),
+    &__item:nth-child(2),
+    &__item:nth-child(3) {
+      display: flex;
+    }
+  }
+
+  .price {
+    &__slider {
+      margin: 60px 24px 24px;
+      padding-bottom: 0;
+      overflow: visible;
+    }
+
+    &__slider-wrapper {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    &__item {
+      position: relative;
+      width: 100%;
+      height: 64px;
+      padding: 0 0 0 16px;
+      align-items: center;
+    }
+
+    &__item:first-child dl {
+      position: relative;
+      overflow: visible;
+    }
+
+    &__item:first-child dl:first-child::before,
+    &__item:first-child dl:nth-child(2)::before,
+    &__item:first-child dl:nth-child(3)::before {
+      position: absolute;
+      top: -55px;
+      left: 0;
+      right: 0;
+      font-family: 'TTLakes Medium';
+      font-size: 14px;
+      line-height: 16px;
+      color: #7E7E82;
+      mix-blend-mode: normal;
+      opacity: 0.72;
+    }
+
+    &__item:first-child dl:first-child::before {
+      content: "Ремонтные услуги";
+    }
+
+    &__item:first-child dl:nth-child(2)::before {
+      content: "Цена";
+    }
+
+    &__item:first-child dl:nth-child(3)::before {
+      content: "Срок";
+    }
+
+    &__item+.price__item {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 24px;
+        right: 24px;
+        height: 1px;
+        background-color: #EAEAEA;
+      }
+    }
+
+    &__item-content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+      align-items: center;
+    }
+
+    dl {
+      width: 385px;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+
+    dt {
+      display: none;
+    }
+
+    &__btn {
+      margin: 16px 16px 16px 0;
+      bottom: 0;
+      right: 0;
+      position: relative;
+    }
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .blur {
+    &::after {
+      display: none;
+    }
+  }
+
+  .offer {
+    padding-bottom: 47px;
+
+    &__text {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    &__link {
+      margin-left: 24px;
+    }
+  }
+
+  .footer {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      margin: 0 24px;
+    }
+
+    &__list-item {
+      text-align: left;
+    }
+  }
+}
+
+@media(min-width: 992px) {
+  .brands {
+
+    &__item:nth-child(7),
+    &__item:nth-child(8) {
+      display: flex;
+    }
+  }
+
+  .tech {
+    &__item:nth-child(4) {
+      display: flex;
     }
   }
 }
@@ -69,7 +274,7 @@
     }
 
     .title {
-      margin: 42px 0 24px 16px;
+      margin: 42px 32px 24px 32px;
     }
 
     &__options {
@@ -112,6 +317,50 @@
       .unactive {
         display: inline;
       }
+    }
+  }
+
+  .block-title {
+    margin-left: 32px;
+  }
+
+  .showmore {
+    margin-left: 32px;
+  }
+
+  .brands {
+    &__slider {
+      padding-bottom: 24px;
+    }
+
+    &__item {
+      width: 240px;
+    }
+  }
+
+  .tech {
+    &__slider {
+      padding-bottom: 24px;
+    }
+
+    &__slider-wrapper {
+      margin: 0 32px;
+    }
+  }
+
+  .price {
+    &__slider {
+      margin: 60px 32px 32px;
+    }
+  }
+
+  .offer {
+    padding-bottom: 50px;
+  }
+
+  .footer {
+    &__list {
+      margin: 0 32px;
     }
   }
 }

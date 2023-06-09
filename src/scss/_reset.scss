@@ -1,11 +1,15 @@
-body {
+body,
+dd,
+dl,
+dt,
+ul,
+ol,
+li,
+button {
   margin: 0;
-}
-
-button{
   padding: 0;
 }
 
-a{
+a {
   color: inherit;
 }
