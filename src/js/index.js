@@ -46,7 +46,6 @@ const techSlider = new Swiper('.tech__slider', {
 });
 
 const priceSlider = new Swiper('.price__slider', {
-  loopedSlides: true,
   slidesPerView: 'auto',
   spaceBetween: 16,
   pagination: {
@@ -65,10 +64,3 @@ burger.addEventListener('click', function () {
   burger.classList.toggle('menu__burger-btn--active');
   burger.classList.toggle('menu__burger-btn--unactive');
 });
-
-/* Promise.all([
-  fetch('https://api.example.com/data1'),
-  fetch('https://api.example.com/data2')
-]).then(responses => {
-  // обработка ответов
-}); */
