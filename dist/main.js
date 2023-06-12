@@ -129,8 +129,17 @@ showmoreBtn.forEach((elem, i = 0) => elem.addEventListener('click', function () 
     document.querySelectorAll('.tech__item').forEach(
       elem => elem.classList.toggle('tech__item--visible'));
   }
-  elem.classList.toggle('showmore--active')
-}))
+  elem.classList.toggle('showmore--active');
+  let showmoreText = elem.querySelectorAll('.showmore__text');
+  showmoreText.forEach((text) => {
+    if (elem.classList.contains('showmore--active')) {
+      text.innerText = 'Скрыть';
+    }
+    else if (!elem.classList.contains('showmore--active')) {
+      text.innerText = 'Показать всё';
+    }
+  });
+}));
 
 const sliderInit = () => {
   const brandsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_23__["default"]('.brands__slider', {
