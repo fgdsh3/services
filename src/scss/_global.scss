@@ -1,8 +1,161 @@
-html,body {
+@import "vars";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
   font-family: 'TTLakes Regular';
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
   color: #1B1C21;
   background-color: #F8F8F8;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #F8F8F8;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+.blur {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 0;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    width: 24px;
+    height: 40px;
+    z-index: 5;
+  }
+
+}
+
+.readmore {
+  margin-top: 16px;
+  font-family: 'TTLakes Medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: all .3s;
+
+  &:hover {
+    color: $text-hover;
+  }
+}
+
+/* .readmore--unactive {
+  display: none;
+} */
+
+.arrows-down {
+  margin-right: 16px;
+}
+
+.smoke {
+  opacity: 0.96;
+  background: #FFFFFF;
+  z-index: 1;
+}
+
+.showmore {
+  font-family: 'TTLakes Medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  transition: all .3s;
+
+  &:hover {
+    color: $text-hover;
+  }
+}
+
+.block-title {
+  margin: 0 16px 32px;
+  padding-top: 16px;
+  position: relative;
+  font-family: 'TTLakes Regular';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7E7E82;
+  height: 80px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/gradient.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: -16px;
+    right: -16px;
+    bottom: 50%;
+    transform: translateY(50%);
+    height: 80px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -16px;
+    right: -16px;
+    height: 1px;
+    z-index: 1;
+    background-color: #D9FFF5;
+  }
+}
+
+.submit-btn {
+  height: 32px;
+  width: 136px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 11px 4px 8px;
+  font-family: 'TTLakes Bold';
+  font-size: 12px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #FF3E79;
+  border-radius: 16px;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $btn-hover
+  }
 }
